@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>citylight University</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://www.shutterstock.com/image-photo/happy-african-american-female-student-600nw-2345738157.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(90deg, #004e92, #000428);
+      box-shadow: 10px rgba(0,0,0,0.5);
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      user-select: none;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin: 5px 0 0;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 50px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #004e92;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-bottom: 3px solid #ff9900;
+      padding-bottom: 8px;
+    }
+
+    .section p, .section ul, .section table {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .school-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .school-showcase img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      image-rendering: auto;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      font-size: 1rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: linear-gradient(90deg, #004e92, #000428);
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    tr:hover {
+      background-color: #ffecb3;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-button {
+      display: inline-block;
+      background: #004e92;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background: #ff9900;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #004e92, #000428);
+      color: #ffcc00;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 1rem;
+      letter-spacing: 1.2px;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.6);
+      user-select: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .section {
+        padding: 20px 15px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .section h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Welcome to citylight University</h1>
+    <p>Empowering minds, achieving greatness</p>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Innovation</h2>
+  <div class="school-showcase">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800" alt="Innovation Award" loading="lazy" />
+    <p>We given best in innovation in our region for coming up with outstanding creative solutions.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🎶 Choir Festival Moments</h2>
+  <div class="school-showcase">
+    <img src="c:\Users\ADMIN\Downloads\top-view-guitar-with-audio-cassettes.jpg" alt="Choir Festival" loading="lazy" />
+    <p>Our choir impressed the nation with their performance, earning top honors at the Kenya National Music Festival. “A big thank you to the judges for their time and consideration...”</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>⚽ Football Glory</h2>
+  <div class="school-showcase">
+    <img src="c:\Users\ADMIN\Downloads\Untitled design.png" alt="Football Team" loading="lazy" />
+    <p>The football team dominated the KUSF League, showing talent, teamwork, and determination in every match.</p>
+  </div>
+  <div class="school-showcase">
+    <img src="c:\Users\ADMIN\Downloads\happy-teenagers-playing-basketball-outdoors.jpg" alt="Football Team 2" loading="lazy" />
+    <p>Continuing their streak, our team remained undefeated throughout the season and brought pride to the entire university.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🏟️ Match Day Highlights</h2>
+  <div class="school-showcase">
+    <img src="c:\Users\ADMIN\Downloads\top-view-soccer-birthday-items-arrangement.jpg" alt="Fans Cheering" loading="lazy" />
+    <p>Bright Future University's fans showed their true colors, turning every match into a celebration of school pride.</p>
+    <p><strong>Our players' speech:</strong><br>
+      “Good game, [Opponent's Team Name]. You guys played hard.”<br>
+      “That was a close one. Respect to [Opponent's Team Name] for a good fight.”<br>
+      “We appreciate the challenge. [Opponent's Team Name] really pushed us.”</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🎥 Our Campus Tour</h2>
+  <div class="school-showcase">
+    <iframe 
+      src="c:\Users\ADMIN\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\71B9E42FD1490C2EE83C1BC4C4E37DA3\WhatsApp Video 2025-08-04 at 10.54.45_ae66ce42.mp4"
+      title="Campus Tour Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🏫 Our Campus</h2>
+  <div class="school-showcase">
+    <img src="c:\Users\ADMIN\Downloads\vertical-shot-several-bicycles-parked-building.jpg" alt="Campus Building" loading="lazy" />
+    <p>Our main campus stands as a hub of academic excellence, surrounded by a community driven to learn, lead, and innovate.</p>
+  </div>
+</section>
+
+<div class="section" style="text-align: center;">
+  <a href="index.html" class="nav-button">⬅ Previous: City Light University</a>
+</div>
+
+<footer>
+  &copy; 2025 Citylight university. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>City Light University</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://www.shutterstock.com/image-photo/happy-african-american-female-student-600nw-2345738157.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+    .pop-logo {
+      height: 150px;
+      border-radius: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      box-shadow:
+        0 0 25px #facc15,
+        0 0 35px #8b5cf6,
+        0 0 10px #fff,
+        inset 0 0 12px rgba(255, 255, 255, 0.2);
+      animation: floatLogo 3s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pop-logo:hover {
+      transform: scale(1.08);
+      box-shadow:
+        0 0 35px #ffcc00,
+        0 0 50px #7c3aed,
+        0 0 20px #fff,
+        inset 0 0 18px rgba(255, 255, 255, 0.3);
+    }
+    @keyframes floatLogo {
+      0%,100% { transform: translateY(0); }
+      50%    { transform: translateY(-10px); }
+    }
+    header h1 {
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0; margin: 0;
+    }
+    nav ul li a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: color .3s, transform .2s;
+    }
+    nav ul li a:hover {
+      color: #fff;
+      background: #ff9900;
+      transform: scale(1.1);
+      box-shadow: 0 0 8px #ff9900;
+    }
+    .hero {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      padding: 120px 20px 100px;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    }
+    .hero h2 { font-size: 3.6rem; margin-bottom:20px; }
+    .hero p { font-size:1.6rem; max-width:700px; margin:auto; }
+    .container { padding: 0 20px; margin: auto; }
+    .section {
+      background: rgba(255,255,255,0.95);
+      color: #222;
+      max-width:1100px;
+      margin: 40px auto;
+      padding:50px 30px;
+      border-radius:15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .section h2 {
+      font-size:2.4rem;
+      margin-bottom:20px;
+      color:#004e92;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      border-bottom:3px solid #ff9900;
+      padding-bottom:5px;
+      .table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #004e92;
+  border-radius: 10px;
+}
+    }
+    
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    table {
+      width:100%;
+      min-width: 600px;
+      border-collapse:collapse;
+      margin-top:25px;
+      font-size:1rem;
+      border-radius:10px;
+      overflow:hidden;
+    }
+    th, td {
+      padding:14px 20px;
+      border-bottom:1px solid #ddd;
+      text-align:left;
+    }
+    th {
+      background: linear-gradient(90deg,#004e92,#000428);
+      color:#fff;
+      font-weight:700;
+    }
+    tr:hover { background-color:#ffecb3; cursor:pointer; }
+    iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+      border-radius: 12px;
+    }
+    .nav-button {
+      display:inline-block;
+      background:#004e92;
+      color:#fff;
+      padding:12px 25px;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+    }
+    .nav-button:hover { background:#ff9900; }
+    footer {
+      background: linear-gradient(90deg,#004e92,#000428);
+      color:#ffcc00;
+      text-align:center;
+      padding:25px 15px;
+      font-size:1rem;
+    }
+    @media (max-width:768px) {
+      .hero h2 { font-size:2.4rem; }
+      .hero p { font-size:1.2rem; }
+      table, th, td { font-size:0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:25px;">
+        <img src="https://dynamic.brandcrowd.com/asset/logo/5ced4304-9897-4d07-87ba-fe9b41c3423c/logo-search-grid-2x?text=university" 
+             alt="University Logo" class="pop-logo" />
+      </div>
+      <h2>City Light University</h2>
+      <p>Empowering students for a better future.</p>
+      <a href="index2.html" class="nav-button" style="margin-top:20px;">Register as a Student</a>
+    </div>
+  </section>
+
+  <nav>
+    <ul>
+            <li><a href="#about our school">about our school</a></li>
+      <li><a href="#aims">Our Aims</a></li>
+      <li><a href="#Our Branches">Our Branches</a></li>
+      <li><a href="#Our Performance">Our Performance</a></li>
+      <li><a href="#Our Campus Coursess">Our Campus Coursess</a></li>
+      <li><a href="Admission Requirements">Admission Requirements</a></li>
+            <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about our school" class="section">
+    <div class="container">
+      <h2>About Our School</h2>
+      <p>Our School is a place of excellence where children can achieve their full potential...</p>
+    </div>
+  </section>
+
+  <section id="aims" class="section">
+    <div class="container">
+      <h2>Our Aims</h2>
+      <p>1: <b>Critical Thinking</b>…</p>
+      <p>2: <b>Lifelong Learning</b>…</p>
+      <p>3: <b>Social & Emotional Growth</b>…</p>
+      <p>4: <b>Character Development</b>…</p>
+      <p>5: <b>Civic Engagement</b>…</p>
+      <p>6: <b>Career Prep</b>…</p>
+    </div>
+  </section>
+
+  <section id="Our Branches" class="section">
+    <div class="container">
+      <h2>Our Branches</h2>
+      <ul>
+        <li>Main Campus: Located in the CBD</li>
+        <li>Chiromo Campus: Off Riverside Drive</li>
+        <li>KNH Campus</li>
+        <li>Kenya Science Campus: Ngong Rd</li>
+      </ul>
+
+  <section id="Our Performance" class="section">
+    <div class="container">
+      <h2>Our Performance</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Courses Offered</th>
+            <th>Qualification</th>
+            <th>Enrolment</th>
+          </tr>
+          <tr>
+            <td>BSc in Computer Science</td>
+            <td>Minimum C+ in KCSE</td>
+            <td>12–18 Jun 2025</td>
+          </tr>
+          <tr>
+            <td>Bachelor of Education</td>
+            <td>C+ in KCSE or equivalent</td>
+            <td>18–13 Apr 2025</td>
+          </tr>
+          <tr>
+            <td>BA in Community Development</td>
+            <td>C+ with Biology</td>
+            <td>12–15 Sep 2025</td>
+          </tr>
+          <tr>
+            <td>BSc in Actuarial Science</td>
+            <td>C+ with Math & Science</td>
+            <td>12–11 Nov 2025</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+   <section class="Our Campus Coursess">
+  <h2>🎥 Our Campus Coursess</h2>
+  <div class="school-showcase">
+    <iframe
+  src="c:\Users\ADMIN\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\D30D0F522A86B3665D8E3A9A91472E28\WhatsApp Video 2025-08-04 at 10.54.22_b2f8adf1.mp4"
+  title="Our Coursess"
+  allowfullscreen
+  loading="lazy"
+  style="width:101%; aspect-ratio:16/9; border:none; border-radius:20px;">
+</iframe>
+  </div>
+</section>
+
+  <section class="Admission Requirements" class="section">
+    <div class="container">
+      <h2>Admission Requirements</h2>
+      <ul>
+        <li>Minimum C+ in KCSE</li>
+        <li>Program-specific criteria</li>
+        <li>English Proficiency for foreign students</li>
+      </ul>
+    </div>
+  </section>
+
+<section class="Our Campus Coursess">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> contact@citylightuni.edu</p>
+    <p><strong>Phone:</strong> +254 700 000000</p>
+    <p><strong>Address:</strong> 123 University Avenue, Nairobi</p>
+  </div>
+</div>
+</section>
+
+ 
+  <div class="section" style="text-align:center;">
+    <a href="index3.html" class="nav-button">Next</a>
+  </div>
+
+  <footer>
+    &copy; 2025 citylight University. All rights reserved.
+  </footer>
+</body>
+</html>

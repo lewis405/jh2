@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>City Light University – Student Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42D8zy90bnyu3lA4xFZXMPXui7al1F-yPKFUnVQ0I6huxuLisPy6hOwvZTzmL5o9B35A&usqp=CAU') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      color: white;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(90deg, #004e92, #000428);
+      padding: 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hero {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      padding: 120px 20px 100px;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    }
+    .hero h2 { font-size: 3.6rem; margin-bottom:20px; }
+    .hero p { font-size:1.6rem; max-width:700px; margin:auto; }
+    .container { padding: 0 20px; margin: auto; }
+
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .container {
+      position: relative;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(#facc15, #22c55e, #3b82f6, #8b5cf6, #f43f5e, #facc15);
+      animation: spin 10s linear infinite;
+      z-index: -2;
+    }
+
+    .container::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 15px;
+      z-index: -1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #facc15;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    form label {
+      font-weight: 600;
+      margin-top: 10px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 2px solid #facc15;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      font-size: 1rem;
+      box-shadow: 0 0 10px #facc15;
+      outline: none;
+    }
+
+    form input:focus,
+    form select:focus {
+      box-shadow: 0 0 15px #facc15;
+    }
+
+    form button {
+      width: 100%;
+      padding: 14px;
+      background-color: #facc15;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 0 12px #facc15;
+      margin-top: 10px;
+    }
+
+    form button:hover {
+      background-color: #eab308;
+      transform: translateY(-2px);
+    }
+
+    .btn {
+      background-color: #10b981;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #059669;
+    }
+
+    footer {
+      background: #000428;
+      color: #ffd700;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 25px;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 10px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="https://dynamic.brandcrowd.com/asset/logo/5ced4304-9897-4d07-87ba-fe9b41c3423c/logo-search-grid-2x?text=university" alt="City Light University Logo">
+      <h1>City Light University</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="regi.php" method="post">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Select --</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="course">Course Applying For</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select --</option>
+        <option>Bachelor of Computer Science</option>
+        <option>Bachelor of Education</option>
+        <option>Bachelor of Laws (LL.B.)</option>
+        <option>Diploma in Counseling Psychology</option>
+        <option>Certificate in Business IT</option>
+      </select>
+
+      <button type="submit">Submit Registration</button>
+
+      <div style="margin-top: 1rem; text-align: center;">
+        <a href="https://forms.gle/q79edroN7CahxdmE9" class="btn">Go to Login</a>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 City Light University. All rights reserved.</p>
+  </footer>
+</body>
+</html>
